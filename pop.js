@@ -1,6 +1,6 @@
 function applyChange(id) {
 	var colorChoice = document.getElementById(id).value;
-	alert("hi!");
+	chrome.runtime.sendMessage({greeting:"hi"});
 }
 
 function changeColorInputState(state) {
@@ -15,9 +15,10 @@ function changeColorInputState(state) {
 }
 
 window.onload = (function () {
-	document.getElementById('background').onchange = "applyChange('background')";
-	document.getElementById('text').onchange = "applyChange('text')";
-	document.getElementById('border').onchange = "applyChange('border')";
+
+	document.getElementById('background').addEventListener('change', applyChange('background'));
+	document.getElementById('text').addEventListener('change', applyChange('text'));
+	document.getElementById('border').addEventListener('change', applyChange('border'));
 	
 	document.getElementById('state').addEventListener('change', function () {
 		if (this.checked) {
