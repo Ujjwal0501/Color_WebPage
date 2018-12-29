@@ -1,0 +1,20 @@
+{
+    "name": "Contrast_Page",
+    "version": "1.0",
+    "description": "Makes a webpage of high contrast!",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [{
+            "matches": ["*://*/*"],
+            "js": ["myscript.js"]
+        }
+
+    ]
+}
