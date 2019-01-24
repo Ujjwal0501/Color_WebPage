@@ -35,7 +35,7 @@ function changeColorInputState(state) {
 }
 
 // add input listeners to color-input elements
-function initListeners() {	
+function initListeners() {
 	bg.addEventListener('input', function () {
 		applyChange('background', bg.value);
 	});
