@@ -6,6 +6,8 @@ A google-chrome browser extension that allows to change the colour of background
   - Open extensions tab in google-chrome browser `chrome://extensions`
   - Turn developer mode on if it's not
   - Now click on 'Load unpacked' button and select the folder that you recently cloned / downloaded
+
+
 ![Enable developer mode](dev_mode.png "Enable developer mode")
 
 
