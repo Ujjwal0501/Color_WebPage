@@ -1,4 +1,2 @@
-# ContrastPage
-
-Chrome Extension to change the background and text color of a webpage.
-By default it sets the background as black and text as white color.
+# Color_WebPage
+A google-chrome browser extension that allows to change the colour of background, text and borders of the web-pages.
