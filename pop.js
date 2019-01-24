@@ -16,9 +16,15 @@ function changeColorInputState(state) {
 
 window.onload = (function () {
 
-	document.getElementById('background').addEventListener('change', applyChange('background'));
-	document.getElementById('text').addEventListener('change', applyChange('text'));
-	document.getElementById('border').addEventListener('change', applyChange('border'));
+	document.getElementById('background').addEventListener('input', function () {
+		applyChange('background');
+	});
+	document.getElementById('text').addEventListener('input', function () {
+		applyChange('text')
+	});
+	document.getElementById('border').addEventListener('input', function () {
+		applyChange('border');
+	});
 	
 	document.getElementById('state').addEventListener('change', function () {
 		if (this.checked) {
