@@ -8,5 +8,17 @@ function(message, sender, response) {
     chrome.tabs.executeScript({
       code: 'console.log(\''+message.greeting+'\')'
     });
-  }
+} else if (message.what == "background"){
+	chrome.tabs.executeScript({
+		code: 'console.log(\'background: '+message.what+'\')'
+	});
+} else if (message.what == "text") {
+	chrome.tabs.executeScript({
+		code: 'console.log(\'text: '+message.what+'\')'
+	});
+} else if (message.what == "border") {
+	chrome.tabs.executeScript({
+		code: 'console.log(\'border: '+message.what+'\')'
+	});
+}
 });
